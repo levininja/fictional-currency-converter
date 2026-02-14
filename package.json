@@ -1,0 +1,21 @@
+{
+  "name": "fictional-currency-converter",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "scss:watch": "sass --watch src:src"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "sass": "^1.81.0",
+    "vite": "^6.0.3"
+  }
+}

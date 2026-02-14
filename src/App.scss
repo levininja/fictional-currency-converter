@@ -1,0 +1,43 @@
+.app {
+  .app-header {
+    margin-bottom: 2rem;
+
+    h1 {
+      margin: 0 0 0.5rem;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .subtitle {
+      margin: 0;
+      font-size: 1rem;
+      color: var(--text-muted);
+    }
+
+    .app-symbol-label {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .app-symbol-select {
+      max-width: 32rem;
+      padding: 0.5rem 0.75rem;
+      font-size: 0.9rem;
+      background: var(--input-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--text);
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+        border-color: var(--accent);
+      }
+    }
+  }
+}

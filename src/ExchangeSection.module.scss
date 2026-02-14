@@ -1,0 +1,68 @@
+.section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow);
+
+  h2 {
+    margin: 0 0 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+}
+
+.row {
+  margin-bottom: 1rem;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.input {
+  width: 100%;
+  max-width: 16rem;
+  padding: 0.6rem 0.75rem;
+  background: var(--input-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+
+  &:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(201, 162, 39, 0.25);
+  }
+}
+
+.result {
+  margin-top: 1.25rem;
+  padding: 1rem;
+  background: var(--input-bg);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.resultLabel {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.resultValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+}

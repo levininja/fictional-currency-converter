@@ -1,0 +1,356 @@
+.section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow);
+
+  h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+}
+
+.description {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.input {
+  padding: 0.5rem 0.75rem;
+  width: 10rem;
+  background: var(--input-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+
+  &:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+}
+
+.inputSmall {
+  padding: 0.35rem 0.5rem;
+  width: 6rem;
+  background: var(--input-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 0.9rem;
+
+  &:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--accent-dim);
+  }
+}
+
+// Fixed column widths so header and rows align
+$col-used: 4rem;
+$col-name: 8rem;
+$col-govname: 8rem;
+$col-fc: 12rem;
+$col-ratio: 8rem;
+$col-ratio2: 8rem;
+$col-ratio3: 8rem;
+$col-usd: 10rem;
+$col-actions: 10rem;
+
+.listWrap {
+  overflow-x: auto;
+  margin-top: 1rem;
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.listHeader {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.itemUsed {
+  width: $col-used;
+  min-width: $col-used;
+  flex-shrink: 0;
+  padding-right: 0.75rem;
+  display: flex;
+  align-items: center;
+
+  input[type="checkbox"] {
+    cursor: pointer;
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+}
+
+.itemName {
+  font-weight: 500;
+  width: $col-name;
+  min-width: $col-name;
+  flex-shrink: 0;
+  padding-right: 0.75rem;
+
+  .inputSmall {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.itemGovName {
+  width: $col-govname;
+  min-width: $col-govname;
+  flex-shrink: 0;
+  padding-right: 0.75rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+
+  .inputSmall {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.itemValue {
+  width: $col-fc;
+  min-width: $col-fc;
+  flex-shrink: 0;
+  padding-right: 0.75rem;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.itemRatio,
+.itemRatio2,
+.itemRatio3 {
+  .ratioDenomName {
+    font-size: 0.8em;
+    font-weight: 400;
+    opacity: 0.9;
+  }
+}
+
+.itemRatio {
+  width: $col-ratio;
+  min-width: $col-ratio;
+  flex-shrink: 0;
+  padding-right: 0.75rem;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.itemRatio2 {
+  width: $col-ratio2;
+  min-width: $col-ratio2;
+  flex-shrink: 0;
+  padding-right: 0.75rem;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.itemRatio3 {
+  width: $col-ratio3;
+  min-width: $col-ratio3;
+  flex-shrink: 0;
+  padding-right: 0.75rem;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.itemUsd {
+  width: $col-usd;
+  min-width: $col-usd;
+  flex-shrink: 0;
+  padding-right: 0.75rem;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.itemActions {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  width: $col-actions;
+  min-width: $col-actions;
+  flex-shrink: 0;
+}
+
+.btnSmall {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.85rem;
+  background: var(--input-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  cursor: pointer;
+  flex-shrink: 0;
+
+  &:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+}
+
+.btnSmallDanger {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.85rem;
+  background: transparent;
+  border: 1px solid var(--error);
+  border-radius: var(--radius);
+  color: var(--error);
+  cursor: pointer;
+
+  &:hover {
+    background: rgba(199, 92, 92, 0.15);
+  }
+}
+
+// Denominations (In-World) — display-only subset
+.inWorldWrap {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.inWorldHeading {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.inWorldListWrap {
+  overflow-x: auto;
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.inWorldHeader {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.inWorldList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.inWorldItem {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.inWorldName {
+  width: $col-name;
+  min-width: $col-name;
+  flex-shrink: 0;
+  padding-right: 0.75rem;
+  font-weight: 500;
+}
+
+.inWorldRatio,
+.inWorldRatio2 {
+  width: $col-ratio;
+  min-width: $col-ratio;
+  flex-shrink: 0;
+  padding-right: 0.75rem;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+
+  .ratioDenomName {
+    font-size: 0.8em;
+    font-weight: 400;
+    opacity: 0.9;
+  }
+}
+
+.inWorldRatio2 {
+  width: $col-ratio2;
+  min-width: $col-ratio2;
+}
+
+.inWorldUsd {
+  width: $col-usd;
+  min-width: $col-usd;
+  flex-shrink: 0;
+  padding-right: 0.75rem;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}

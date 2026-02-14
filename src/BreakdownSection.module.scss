@@ -1,0 +1,76 @@
+.section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+
+  h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+}
+
+.description {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+
+  strong {
+    color: var(--accent);
+  }
+}
+
+.empty {
+  margin: 0;
+  padding: 1rem;
+  background: var(--input-bg);
+  border-radius: var(--radius);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.count {
+  font-weight: 700;
+  color: var(--accent);
+  min-width: 2rem;
+}
+
+.times {
+  color: var(--text-muted);
+}
+
+.name {
+  font-weight: 500;
+}
+
+.value {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.remainder {
+  margin: 0.75rem 0 0;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
